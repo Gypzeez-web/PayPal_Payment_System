@@ -61,7 +61,7 @@ export default class AddCard extends Component {
       cvv:this.state.cvv
     };
     axios
-      .post("http://localhost:3777/app/addcard", cardregistered)
+      .post("http://localhost:3778/app/addcard", cardregistered)
       .then((response) => console.log(response.data));
 
     this.setState({

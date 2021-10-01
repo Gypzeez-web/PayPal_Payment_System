@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
 const bcrypt=require('bcrypt');
-const signupTemplateCopy=require('../models/addCardModel')
+const addcardTemplateCopy=require('../models/addCardModel')
 
 router.post('/addcard',async(request,response)=>{
     const saltCardNumber=await bcrypt.genSalt(10)
@@ -9,14 +9,14 @@ router.post('/addcard',async(request,response)=>{
 
 
 
-    const signedUpUser=signupTemplateCopy({
+    const addCardUser=addcardTemplateCopy({
         fullname:request.body.fullname,
         cardnumber:secureCardNumber,
         month:request.body.month,
         year:request.body.year,
         cvv:request.body.cvv
     })
-    signedUpUser.save().then(data=>{
+    addCardUser.save().then(data=>{
         response.json(data)
     }).
     catch(error=>{

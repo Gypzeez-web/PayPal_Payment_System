@@ -1,24 +1,17 @@
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const routesUrls = require("./routes/routes");
+dotenv.config();
+
+
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-dotenv.config();
-mongoose.connect(process.env.DATABASE_ACCESS, () =>
-  console.log("Database Connected")
-);
-
-app.use(express.json());
 app.use(cors());
 
-app.use("/app", routesUrls);
 
 app.post("/payment", cors(), async (req, res) => {
   let { amount, id } = req.body;
@@ -44,6 +37,6 @@ app.post("/payment", cors(), async (req, res) => {
   }
 });
 
-app.listen(3778, () => {
-  console.log("Server Running 3778");
+app.listen(4000, () => {
+  console.log("Server Running 4000");
 });
