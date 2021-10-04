@@ -6,8 +6,7 @@
   "scripts": {
     "test": "Add card",
     "start1": "nodemon server.js",
-    "start2": "nodemon index.js",
-    "start3": "nodemon ser.js"
+    "start2": "nodemon ser.js"
   },
   "author": "Elankumaran",
   "license": "ISC",
