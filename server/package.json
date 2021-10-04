@@ -6,7 +6,8 @@
   "scripts": {
     "test": "Add card",
     "start1": "nodemon server.js",
-    "start2": "nodemon index.js"
+    "start2": "nodemon index.js",
+    "start3": "nodemon ser.js"
   },
   "author": "Elankumaran",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "express": "^4.17.1",
     "mongoose": "^6.0.8",
     "nodemon": "^2.0.13",
-    "stripe": "^8.178.0"
+    "stripe": "^8.178.0",
+    "uuid": "^8.3.2"
   }
 }
