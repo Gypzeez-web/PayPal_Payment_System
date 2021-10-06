@@ -1,7 +1,10 @@
 import React from "react";
+import './cardform.css';
 import useForm from './useform';
 import { Button, Form, Alert, Row, Col } from "react-bootstrap";
 import Cards from "react-credit-cards";
+import "react-credit-cards/es/styles-compiled.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const CardForm = () => {
