@@ -1,5 +1,5 @@
-//import CardForm from "./card/cardform";
-import ReactCreditCards from "./components/ReactCreditCards";
+import CardForm from "./card/cardform";
+
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App container">
       <h1>Gypzeez payment</h1>
-      <ReactCreditCards/>
+      <CardForm/>
     </div>
   );
 }
