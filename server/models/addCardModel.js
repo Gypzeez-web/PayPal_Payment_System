@@ -1,23 +1,16 @@
 const mongoose=require('mongoose');
 const addcardTemplate=new mongoose.Schema({
-    fullname:{
+    cardHolderName:{
         type:String,
         required:true
     },
     cardnumber:{
         type:Number,
         required:true,
-        unique:true
     },
-    month:{
-        type:Number,
+    Date:{
+        type:Date,
         required:true,
-        unique:true
-    },
-    year:{
-        type:Number,
-        required:true,
-        unique:true
     },
     cvv:{
         type:Number,
@@ -29,4 +22,4 @@ const addcardTemplate=new mongoose.Schema({
     }
 })
 
-module.exports=mongoose.model('addTable',addcardTemplate)
+module.exports=mongoose.model('addCard',addcardTemplate)

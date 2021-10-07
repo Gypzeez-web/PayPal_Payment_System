@@ -10,10 +10,9 @@ router.post('/addcard',async(request,response)=>{
 
 
     const addCardUser=addcardTemplateCopy({
-        fullname:request.body.fullname,
+        cardHolderName:request.body.cardHolderName,
         cardnumber:secureCardNumber,
-        month:request.body.month,
-        year:request.body.year,
+        date:request.body.date,
         cvv:request.body.cvv
     })
     addCardUser.save().then(data=>{
